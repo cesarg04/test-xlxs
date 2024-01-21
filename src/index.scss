@@ -1,0 +1,268 @@
+// @import './animations.scss';
+
+:root {
+  --color-white: #ffffff;
+  --color-red-error: #EA6D72;
+  --color-red-01: #EA6D72;
+  --color-red-02: #ED1C24; //remax
+  --color-border: #c5c6c9;
+  --color-gray-light: #BDC1CB;
+  --color-border-hover: #203464;
+
+  --color-blue-main: #203464;
+  --color-blue-secondary: #357abd;
+  --color-blue-04: #6F7B98;
+  --color-blue-card: #357ABD;
+
+  --color-gray-main: #bdc1cb;
+  --color-gray-02: #989898;
+  --color-gray-03: #E6ECF1;
+  --color-gray-04: #e6e4e4;
+
+  --btn-bg-01: var(--color-blue-main);
+  --btn-bg-02: var(--color-blue-secondary);
+  --btn-bg-03: var(--color-gray-03);
+  --btn-bg-04: var(--color-blue-04);
+
+  --FS-NORMAL: 16px;
+  --FS-SIDE-BAR: 16px;
+  --FS-FIELD: 16px;
+  --FS-ERROR-MSG: 12px;
+
+
+  // 
+  --FF-SF: 'SF Compact Display';
+  // --FF-SFM: 'SF Compact Display medium';
+  --FF-KC: "keep calm";
+  // 
+  // --------------------------------------------------
+  // refactor
+  --m-color-gray-01: #F5F5F5;
+  --m-color-gray-02: #949CA1;
+  --m-color-gray-03: #606060;
+  --m-color-green-01: #8CC63F;
+  --m-color-red-01: #DC1C2E;
+  --m-color-blue-01: #A4D7F4;
+  --m-color-blue-02: #014491;
+  --m-color-yellow-01: #F6CA05;
+  --m-color-yellow-hover: #ddb504;
+  --m-color-blue-03: #1A3668;
+  --fs-text-x-large: 13px;
+  --fs-text-large: 19px;
+  --fs-text-x-medium: 17px;
+  --fs-text-medium: 15px;
+  --fs-text-x-small: 12px;
+  --fs-text-small: 12px;
+
+  --height-input: 14px;
+// add sand serif
+
+  --ff-gotham: 'Gotham', sans-serif;  ;
+  --ff-inter: 'Inter', sans-serif;
+
+  --fs-placeholder: var(--fs-text-x-small);
+
+  --m-border-01: var(--m-color-gray-03);
+
+  --m-error-01: var(--m-color-red-01);
+  --m-success-01: var(--m-color-green-01);
+  --m-info-01: var(--m-color-gray-02);
+
+  --text-red: var(--m-color-red-01);
+  --text-green: var(--m-color-green-01);
+  --text-blue: var(--m-color-blue-03);
+  --text-blue-01: var(--m-color-blue-01);
+  --text-blue-02: var(--m-color-blue-02);
+  --text-gray: var(--m-color-gray-03);
+  --text-gray-02: var(--m-color-gray-02);
+  --text-white: white;
+  --text-black: black;
+
+}
+
+* {
+  font-family: var(--FF-SF);
+
+  .MuiFormHelperText-root {
+    font-size: 10px !important;
+    color: var(--m-color-gray-03) !important;
+  }
+
+  .MuiInputLabel-asterisk {
+    color: var(--m-color-red-01) !important;
+  }
+
+  .required {
+    & .MuiFormLabel-root {
+      &::after {
+        content: " *";
+        color: var(--m-color-red-01) !important;
+      }
+    }
+  }
+}
+
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #666666;
+}
+
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #9f9f9f;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #9f9f9f;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+div.MuiPaper-root>div:nth-of-type(2):hover::-webkit-scrollbar {
+  height: 15px;
+}
+
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+.MuiPickersCalendarHeader-label {
+  text-transform: capitalize;
+}
+
+.MuiPagination-root .Mui-selected {
+  background-color: var(--m-color-blue-01) !important;
+  color: var(--m-color-blue-03) !important;
+}
+
+.MuiAutocomplete-option[aria-selected="true"] {
+  background-color: var(--m-color-blue-01) !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.input-with-icon {
+  & .MuiFormLabel-root[data-shrink="false"] {
+    margin-left: 0.9375rem;
+  }
+}
+
+.MuiFormLabel-root[data-shrink="true"] {
+  font-size: 0.875rem !important;
+  background-color: white;
+  padding-right: 0.9375rem;
+}
+
+// .MuiAutocomplete-popper{
+//   width: max-content !important;
+
+//   ul {
+//     &#sector_property-autocomplete-listbox{
+//       width: max-content;
+//         min-width: max-content;
+//     }
+
+//   }
+// }
+
+// ONLY CONTENT HAVE THIS ID
+.MuiAutocomplete-popper:has(ul#sector_property-autocomplete-listbox) {
+  width: max-content !important;
+}
+
+// #sector_property-autocomplete-listbox{
+//   width: max-content;
+//   min-width: max-content;
+// }
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fslightbox-slide-btn-container {
+  padding: 0 !important;
+  margin: 5px;
+}
+
+.ql-editor {
+  //   color: var(--color-gray-02) !important;
+  min-height: 220px !important;
+  height: auto !important;
+}
+
+
+.sortable-chosen {
+  cursor: pointer !important;
+}
+
+.sortable-ghost {
+  cursor: pointer !important;
+}
+
+.sortable-list-custom{
+  cursor: pointer !important;
+  opacity: 1 !important;
+}
+
+
+
+.draggable {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  position: absolute;
+  cursor: grab;
+}
+// .sortable-drag{
+//   opacity: 1 !important;
+// }
+
+// .ghost {
+//   opacity: 1 !important;
+// }
