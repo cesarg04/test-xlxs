@@ -39,7 +39,7 @@ const FileInput = () => {
                 const sheet = workbook.Sheets[sheetName]
                 const parsedData = xlsx.utils.sheet_to_json(sheet) as any;
                 const data_parsed = removeSpacesInKeys(parsedData)
-                console.log(data_parsed);
+                console.log(JSON.stringify(data_parsed));
                 setData(data_parsed)
             }
         }
